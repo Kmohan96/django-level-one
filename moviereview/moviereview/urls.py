@@ -17,8 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from review.views import basic
+from review.views import movie_info
+from review.views import movies
+# from review.views import rating_get
+# from review.views import budget_get
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('basic/',basic)
+    path('basic/',basic),
+    path('movie/',movie_info),
+    path('a/',movies),
+    # path('b/',rating_get),
+    # path('c/',budget_get)
+
 ]
